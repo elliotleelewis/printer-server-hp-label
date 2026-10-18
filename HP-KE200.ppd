@@ -1,0 +1,88 @@
+*PPD-Adobe: "4.3"
+*%
+*% HP KE200 thermal label printer (Bixolon SLCS), for use with the
+*% rastertohplabel filter on Linux/CUPS.
+*%
+*FormatVersion: "4.3"
+*FileVersion: "1.0"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "HPKE200.PPD"
+*Manufacturer: "HP"
+*Product: "(HP KE200)"
+*ModelName: "HP KE200"
+*ShortNickName: "HP KE200"
+*NickName: "HP KE200 Label Printer (SLCS)"
+*1284DeviceID: "MFG:HP;CMD:Bixolon_01;MODEL:KE200;CLASS:PRINTER;DES:HP KE200;"
+*PSVersion: "(3010.000) 0"
+*LanguageLevel: "3"
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*FileSystem: False
+*Throughput: "1"
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*cupsVersion: 2.4
+*cupsManualCopies: False
+*cupsFilter: "application/vnd.cups-raster 0 rastertohplabel"
+
+*OpenUI *PageSize/Label Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: w288h432
+*PageSize w288h432/4 x 6 in: "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
+*PageSize w288h288/4 x 4 in: "<</PageSize[288 288]/ImagingBBox null>>setpagedevice"
+*PageSize w144h288/2 x 4 in: "<</PageSize[144 288]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion/Label Size: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: w288h432
+*PageRegion w288h432/4 x 6 in: "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
+*PageRegion w288h288/4 x 4 in: "<</PageSize[288 288]/ImagingBBox null>>setpagedevice"
+*PageRegion w144h288/2 x 4 in: "<</PageSize[144 288]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: w288h432
+*ImageableArea w288h432: "0 0 288 432"
+*ImageableArea w288h288: "0 0 288 288"
+*ImageableArea w144h288: "0 0 144 288"
+*DefaultPaperDimension: w288h432
+*PaperDimension w288h432: "288 432"
+*PaperDimension w288h288: "288 288"
+*PaperDimension w144h288: "144 288"
+
+*OpenUI *Resolution/Resolution: PickOne
+*OrderDependency: 10 AnySetup *Resolution
+*DefaultResolution: 203dpi
+*Resolution 203dpi/203 DPI: "<</HWResolution[203 203]/cupsBitsPerColor 1/cupsColorOrder 0/cupsColorSpace 3>>setpagedevice"
+*CloseUI: *Resolution
+
+*OpenUI *Darkness/Darkness: PickOne
+*OrderDependency: 20 AnySetup *Darkness
+*DefaultDarkness: 14
+*Darkness 8/8 (Lighter): ""
+*Darkness 10/10: ""
+*Darkness 12/12: ""
+*Darkness 14/14 (Default): ""
+*Darkness 16/16: ""
+*Darkness 18/18: ""
+*Darkness 20/20 (Darkest): ""
+*CloseUI: *Darkness
+
+*OpenUI *PrintSpeed/Print Speed: PickOne
+*OrderDependency: 20 AnySetup *PrintSpeed
+*DefaultPrintSpeed: 4
+*PrintSpeed 1/3 in/sec: ""
+*PrintSpeed 2/4 in/sec: ""
+*PrintSpeed 3/5 in/sec: ""
+*PrintSpeed 4/6 in/sec (Default): ""
+*PrintSpeed 5/7 in/sec: ""
+*CloseUI: *PrintSpeed
+
+*OpenUI *SensorType/Media Sensor: PickOne
+*OrderDependency: 20 AnySetup *SensorType
+*DefaultSensorType: 0Gap
+*SensorType 0Gap/Gap (die-cut labels): ""
+*SensorType 1Continuous/Continuous: ""
+*SensorType 2Blackmark/Black Mark: ""
+*CloseUI: *SensorType
