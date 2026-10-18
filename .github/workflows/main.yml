@@ -1,0 +1,31 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-26.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10
+        with:
+          enable-cache: true
+      # cupstestppd, to validate the PPD.
+      - run: sudo apt-get install -y --no-install-recommends cups-client
+      - run: uv sync --locked
+      - run: uv run ruff check
+      - run: uv run ruff format --check
+      - run: uv run mypy
+      - run: uv run shfmt --diff install.sh
+      - run: shellcheck install.sh
+      - run: uv run agnix --strict .
+      # The filter is installed by install.sh, not present on the runner.
+      - run: cupstestppd -I filters HP-KE200.ppd
+      - run: uv run pytest --junitxml=reports/junit.xml
+      - uses: test-summary/action@v2
+        if: always()
+        with:
+          paths: "reports/*.xml"
