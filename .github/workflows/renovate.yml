@@ -1,0 +1,20 @@
+on:
+  pull_request:
+    types:
+      - edited
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 0/6 * * *"
+  workflow_dispatch:
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: renovatebot/github-action@v46.3.8
+        with:
+          configurationFile: ./renovate.json
+          token: ${{ secrets.RENOVATE_TOKEN }}

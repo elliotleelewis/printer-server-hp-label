@@ -1,0 +1,50 @@
+[project]
+name = "printer-server-hp-label"
+version = "1.0.0"
+description = "Raspberry Pi AirPrint server and Linux CUPS driver for the HP KE200 thermal label printer"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+# The filter runs on the Pi's system Python, so it must stay standard library only.
+dependencies = []
+
+[dependency-groups]
+dev = [
+  "agnix~=0.59.0",
+  "mypy~=2.4.0",
+  "pytest~=9.1.1",
+  "ruff~=0.17.1",
+  "shfmt-py~=4.2.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  # Conflicts with the formatter.
+  "COM812",
+  # Copyright is in LICENSE, not a header in every file.
+  "CPY001",
+  # Mutually exclusive with D211 and D212, which are kept.
+  "D203",
+  "D213",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["INP001", "PLR2004", "S101"]
+
+[tool.mypy]
+strict = true
+python_version = "3.11"
+files = ["rastertohplabel.py", "tests"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = ["--strict-markers", "-ra"]

@@ -8,7 +8,7 @@ Once set up, the printer appears as **HP Label Printer @ &lt;hostname&gt;** on e
 
 The KE200 is a Bixolon-made printer (its USB device ID reports `CMD:Bixolon_01`) that speaks Bixolon's SLCS label language. This project provides:
 
-- **`rastertohplabel`**: a CUPS filter (Python 3, standard library only) that converts CUPS raster pages into SLCS commands
+- **`rastertohplabel.py`**: a CUPS filter (Python 3, standard library only) that converts CUPS raster pages into SLCS commands
 - **`HP-KE200.ppd`**: a printer description with 4×6, 4×4 and 2×4 in label sizes, darkness, speed and media sensor options
 - **`install.sh`**: installs both and creates a shared CUPS queue
 
@@ -95,6 +95,20 @@ Worked out by analysing the vendor's macOS CUPS filter (for interoperability) an
 | `\r\nP1[,copies]\r\n` | Print |
 
 The printer is 203 dpi, so a 4×6 in label is 812 × 1218 dots.
+
+## Development
+
+Development needs [uv](https://docs.astral.sh/uv/); the Pi itself doesn't. [AGENTS.md](./AGENTS.md) covers the layout and conventions.
+
+```sh
+uv sync                       # ruff, mypy, pytest, shfmt and agnix
+uv run pytest                 # tests
+uv run ruff check             # lint
+uv run ruff format            # format
+uv run mypy                   # type check
+```
+
+CI also runs shellcheck and `cupstestppd` (from `cups-client`). Commit messages and PR titles follow [Conventional Commits](https://www.conventionalcommits.org).
 
 ## License
 

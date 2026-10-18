@@ -1,2 +1,12 @@
 # Vendor driver (HP/Bixolon copyrighted binaries); download it yourself if needed
 vendor/
+
+# Test reports
+reports/
+
+# Python
+__pycache__/
+.venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
