@@ -55,7 +55,13 @@ CUPS does the PDF rendering and the AirPrint/Bonjour advertising, and the filter
 
 ## Printing
 
-**Mac:** System Settings → Printers & Scanners → Add Printer → pick **HP Label Printer @ labelprinter** (Use: *AirPrint*). In the print dialog choose paper size **4 x 6 in** and, if the label is offset or too small, tick *Scale to fit*.
+**Mac:** add the printer by address, not from the default Bonjour list. From that list macOS treats it as a shared CUPS printer and only offers *Generic PostScript Printer*, which has no label sizes.
+
+1. System Settings → Printers & Scanners → Add Printer, Scanner or Fax… → **IP** tab
+2. Address `labelprinter.local`, Protocol **AirPrint**, Queue `printers/HP_KE200`
+3. Wait for **Use** to show **HP KE200 Label Printer (SLCS)**, the driver macOS builds over AirPrint, then click Add
+
+In the print dialog choose paper size **4 x 6 in** and, if the label is offset or too small, tick *Scale to fit*.
 
 **iPhone / iPad:** Share → Print → select the printer.
 
