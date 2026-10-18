@@ -10,6 +10,11 @@
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
+    },
+    {
+      "description": "The filter runs on the Pi's system Python (3.11 on Debian 12), so CI stays on it.",
+      "matchPackageNames": ["python"],
+      "enabled": false
     }
   ],
   "lockFileMaintenance": {
