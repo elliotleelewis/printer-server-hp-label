@@ -10,7 +10,7 @@ dependencies = []
 
 [dependency-groups]
 dev = [
-  "agnix~=0.59.0",
+  "agnix~=0.60.0",
   "mypy~=2.4.0",
   "pytest~=9.2.0",
   "ruff~=0.17.1",
