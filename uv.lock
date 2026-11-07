@@ -8,14 +8,14 @@ resolution-markers = [
 
 [[package]]
 name = "agnix"
-version = "0.60.2"
+version = "0.61.0"
 source = { registry = "https://pypi.org/simple" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d0/97/1734f7f73b43141bfd63596ab7f99af22e87bf444f9e1c89a359a1d6825a/agnix-0.60.2-py3-none-macosx_11_0_arm64.whl", hash = "sha256:ff39a6225eb91a7de05ed0f825d5f8ec7820bd1ad33713e5bd086a9c07de2410", size = 5382390, upload-time = "2026-10-30T18:25:51.121Z" },
-    { url = "https://files.pythonhosted.org/packages/76/5d/bada598c43e7e7f4beadf297ec5e1d7267594200fcfd56ef87745e36ba5d/agnix-0.60.2-py3-none-manylinux_2_18_aarch64.whl", hash = "sha256:7a685835e01f280b304c5421d4b708990128c815877ed938641076418d849c6b", size = 5609276, upload-time = "2026-10-30T18:25:53.2Z" },
-    { url = "https://files.pythonhosted.org/packages/94/d4/2c6f9df2c14699cccf3e2b9d72160433e46540c949da5590b500314de43a/agnix-0.60.2-py3-none-manylinux_2_18_x86_64.whl", hash = "sha256:d6b88bb00117c300c6270e23a7d21c47d1749ee1a7814b40a7714c0fc3596aa7", size = 6241395, upload-time = "2026-10-30T18:25:54.882Z" },
-    { url = "https://files.pythonhosted.org/packages/d0/87/2c02e24cb09fbc566b2065cb04fd772657ac8bd74e13f77a2218db1e6cf1/agnix-0.60.2-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:9fbe9bbd9af96f43f2317ddcdfe4a88cb266272bb1a2c648b8909d04ed548a6a", size = 6304502, upload-time = "2026-10-30T18:25:56.666Z" },
-    { url = "https://files.pythonhosted.org/packages/e4/a4/85d1eb30d071c82ebb8c6c373787e7ae94d36ccdd63773d7bd0730d3feab/agnix-0.60.2-py3-none-win_amd64.whl", hash = "sha256:2bc50d8273ea33ddc9933438479334d7aa82bfef04f0226ac340f69413ac3d7c", size = 6514928, upload-time = "2026-10-30T18:25:58.448Z" },
+    { url = "https://files.pythonhosted.org/packages/68/26/5f4efc05161464a82f4ae3a440fd8057292328eeb75bbfc84b902b24c53f/agnix-0.61.0-py3-none-macosx_11_0_arm64.whl", hash = "sha256:c4b282efd28991d5ca512586f96df54756f5ecf54650fb4b7aa8753bd6fa8f62", size = 5402358, upload-time = "2026-11-04T14:19:07.476Z" },
+    { url = "https://files.pythonhosted.org/packages/75/8c/d081c5be818695f2b22ee1af92bdc1b936e1f8db23826e65ec08d6f5a9e2/agnix-0.61.0-py3-none-manylinux_2_18_aarch64.whl", hash = "sha256:d4033d749d546dd229a06bffe537b68a9fcdfe6a77da0ea7f255cf2dc2c7a370", size = 5628204, upload-time = "2026-11-04T14:19:09.164Z" },
+    { url = "https://files.pythonhosted.org/packages/63/85/5dcca3e37f47be46b826e726c61b25d5b722b29461d40cde37bd8850ff2e/agnix-0.61.0-py3-none-manylinux_2_18_x86_64.whl", hash = "sha256:e452b59ca6f8a365c25a0ed1e1b59934bf085560128238d00cc4ca8c351142ef", size = 6258499, upload-time = "2026-11-04T14:19:10.905Z" },
+    { url = "https://files.pythonhosted.org/packages/44/84/13ce86db81ffa8404fdf6f4aa8fc3893f547b67da7ecd97f6941994cba04/agnix-0.61.0-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:9b0fc28a10ff2575af1cb80f9c70a541c8583928d6db191ed3046be6ba095643", size = 6322013, upload-time = "2026-11-04T14:19:12.504Z" },
+    { url = "https://files.pythonhosted.org/packages/32/fb/bdafaf15c32769272a1a856a2fd71584969b3c67c67d7f265b28bfccfed6/agnix-0.61.0-py3-none-win_amd64.whl", hash = "sha256:39f7aa5b70e65f6bd35bd652f204a7bb4f8c41dd56c819d1350cb7baefa948aa", size = 6536165, upload-time = "2026-11-04T14:19:14.124Z" },
 ]
 
 [[package]]
@@ -330,7 +330,7 @@ dev = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "agnix", specifier = "~=0.60.0" },
+    { name = "agnix", specifier = "~=0.61.0" },
     { name = "mypy", specifier = "~=2.4.0" },
     { name = "pytest", specifier = "~=9.2.0" },
     { name = "ruff", specifier = "~=0.17.1" },
